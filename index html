@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Vaanu ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+overflow:hidden;
+background:#000;
+}
+
+.hero{
+height:100vh;
+width:100%;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:url("https://images.unsplash.com/photo-1506744038136-46273834b3fb") center center/cover;
+filter:brightness(0.4);
+}
+
+.content{
+position:relative;
+z-index:10;
+padding:20px;
+}
+
+.content h1{
+font-size:4rem;
+color:white;
+text-shadow:0 0 20px pink;
+animation:glow 2s infinite alternate;
+}
+
+.content p{
+color:white;
+font-size:1.3rem;
+max-width:700px;
+margin:20px auto;
+line-height:2;
+}
+
+.btn{
+padding:15px 40px;
+border:none;
+border-radius:50px;
+background:#ff5fa2;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+@keyframes glow{
+
+from{
+text-shadow:0 0 20px pink;
+}
+
+to{
+text-shadow:0 0 40px #ff5fa2;
+}
+
+}
+
+/* Rain */
+
+.rain{
+position:absolute;
+width:2px;
+height:100px;
+background:rgba(255,255,255,.5);
+animation:rain linear infinite;
+}
+
+@keyframes rain{
+
+0%{
+transform:translateY(-100px);
+}
+
+100%{
+transform:translateY(120vh);
+}
+
+}
+
+/* Hearts */
+
+.heart{
+position:absolute;
+font-size:20px;
+color:#ff5fa2;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+
+}
+
+/* Plants */
+
+.plant{
+position:absolute;
+font-size:80px;
+animation:sway 4s ease-in-out infinite;
+opacity:.8;
+}
+
+.left{
+left:20px;
+bottom:20px;
+}
+
+.right{
+right:20px;
+bottom:20px;
+}
+
+@keyframes sway{
+
+0%{
+transform:rotate(-3deg);
+}
+
+50%{
+transform:rotate(3deg);
+}
+
+100%{
+transform:rotate(-3deg);
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="plant left">🌿</div>
+<div class="plant right">🪴</div>
+
+<div class="content">
+
+<h1>Happy Birthday Vaanu ❤️</h1>
+
+<p>
+
+Sila per namma life-la vandhu...
+
+namma naatkalai azhaga maathiduvaanga...
+
+Nee appadi oru person Vaanu...
+
+Mazhai pola calm...
+
+Malar pola azhagu...
+
+Un friendship romba special... 🌸
+
+</p>
+
+<button class="btn">
+Open My Heart ✨
+</button>
+
+</div>
+
+</section>
+
+<script>
+
+/* Rain */
+
+for(let i=0;i<120;i++){
+
+let rain=document.createElement("div");
+
+rain.classList.add("rain");
+
+rain.style.left=Math.random()*100+"vw";
+
+rain.style.animationDuration=
+(Math.random()*1+0.5)+"s";
+
+document.body.appendChild(rain);
+
+}
+
+/* Hearts */
+
+for(let i=0;i<40;i++){
+
+let heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=
+(Math.random()*6+5)+"s";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
